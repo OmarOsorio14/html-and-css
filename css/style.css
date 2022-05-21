@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 15% 85%;
+    width: 100%;
+    height: 100vh;
+    background-color: #83d5d9;
+}
+.header-image{
+    background-image: url("../assets/design1_image1.jpg");
+    background-size:cover;
+    background-position: center;
+    justify-self: center;
+    align-self: center;
+    border-radius: 20px;
+    width:60%;
+    margin-left: 20%;
+    height: 80%;
+    border: 2px solid black;
+}
+header{
+    position: fixed; 
+    top:0;
+    left: 10%;
+    width: 90%;
+    height: 15%;
+    background-image: url('../assets/design1_image1.jpg');
+    background-size: cover;
+    background-position: center;
+    grid-column:2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+nav li{
+    margin: 0;
+    margin-bottom: 1rem;
+    list-style: none;
+    justify-self: start;
+    width: 100%;
+    cursor: pointer;
+}
+nav{
+    background-color: #2a2921;
+    display:flex;
+    flex-direction: column;
+    grid-column:1;
+    grid-row:2;
+    position: fixed;
+    top: 15%;
+    height: 100%;
+    width: 10%;
+}
+.checkbtn{
+    color: white;
+    align-self: center;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+li a{
+    text-decoration: none;
+    color: white;
+    margin-bottom: 20px;
+}
+li a:hover{
+    width: 100%;
+    padding: 5px;
+    animation: nav-animation 1s;
+    background-color: white;
+    color: black;
+}
+@keyframes nav-animation {
+    0%{
+        background-color: #2a2921;
+        color: white;
+    }
+    100%{
+        background-color: white;
+        color: black;
+    }
+}
+main{
+    padding: 1rem;
+    grid-column:2;
+    grid-row:2;
+    display: flex;
+    flex-direction: column;
+}
+.selected{
+    width: 100%;
+    padding: 5px;
+    background-color: white;
+}
+.selected a{
+    color: black;
+}
+h1{
+    color: gold;
+    text-shadow: 0 0 2px black;   
+    height: 90%;
+    align-self: center;
+}
+h2{
+    color: black;
+    background-color:  #83d5d9;
+    border-radius: 10px 10px 0px 0px;
+    align-self: center;
+    padding: .5rem;
+}
+article{
+    margin-bottom: 1rem;
+    padding-right: 1rem;
+}
+.logo{
+    position: fixed;
+    background-color: #2a2921;
+    top: 0px;
+    left: 0px;
+    width: 10%;
+    height: 15%;
+    justify-self: center;
+    align-self: center;
+    grid-row:1;
+    grid-column: 1;
+
+}
+.content{
+    justify-self: center;
+    align-self: center;
+    margin: 10px;
+}
+.content-image{
+    width: 250px;
+    grid-row:1;
+    justify-self: center;
+    align-self: center;
+    border-radius: 20px;
+}
+dt{
+    padding-left: 1.5em;
+    font-weight: bold;
+}
+.maps{
+    display: block;
+}
+.maps hr{
+    margin-bottom: 1rem;
+    border: 1px solid black;
+}
+.maps iframe{
+    width:100%;
+    height:50vh; 
+    border:0;
+}
+dd{
+    padding-left: 3em;
+    padding-bottom: 1rem;
+}
+table{
+    margin: 10px;
+    background-color: antiquewhite;
+}
+table caption{
+    margin: 5px;
+}
+td,th{
+    padding: .5rem;
+    text-align: center;
+}
+table h5{
+    text-decoration: underline;
+}
+span{
+    font-weight: bold;
+}
+.schedule-info p{
+    margin-bottom: 10px;
+}
+.schedule-contant{
+    display: flex;
+    justify-content: space-around;
+}
+main h3{
+    align-self: center;
+    margin-bottom: 10px;
+}
+.indent{
+    text-indent: 1.5rem;
+}
+li{
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+.all-play-list{
+    margin-left: 3rem;
+    list-style-type:circle;
+}
+fieldset{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    background-color: antiquewhite;
+    margin-bottom: 1rem;
+}
+label,input{
+    margin: 1rem;
+}
+legend{
+    background-color: antiquewhite;
+    border: 1px solid black;
+}
+input{
+    border: 0;
+    background-color: antiquewhite;
+    border-bottom: 2px solid #000;
+}
+.form-width-normal{
+    width: 50%;
+}
+.form-width-full{
+    width: 100%;
+}
+.long-line{
+    width: 80%;
+}
+form{
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.form-button{
+    text-align: center;
+    background-color: black;
+    padding: 1rem;
+    color: white;
+    border-radius: 50px;
+}
+.form-button:hover{
+    background-color:rgb(42, 41, 41);
+    cursor: pointer;
+}
+@media screen and (max-width: 808px){
+    .logo{
+        display: none;
+    }
+    nav{
+        top: 0;
+    }
+    .checkbtn{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color:#2a2921;
+        top: 15%;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .form-width-normal{
+        width: 100%;
+    }
+    h2{
+        padding: 0;
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 450px) {
+    h2{
+        font-size: 1rem;
+    }
+    label{
+        display: block;
+    }
+}
